@@ -36,7 +36,6 @@ class QuantumBayesianRiskEvaluator:
             self.wire_map[node_key] = index
             
         # 3. Core Device Bindings
-        # For actual hardware runs, replace "default.qubit" with "qiskit.ibmq" via the pennylane-qiskit plugin
         self.dev = qml.device("default.qubit", wires=self.num_qubits)
         print(f"[+] Qubit Register Online. Active Size: {self.num_qubits} wires.")
         
@@ -65,6 +64,30 @@ class QuantumBayesianRiskEvaluator:
                 for ctrl in control_wires:
                     qml.CRY(theta_conditional / len(control_wires), wires=[ctrl, wire])
 
+    def build_qcnn_layers(self, weights):
+        """
+        Applies a structural template pass for Convolutional and Pooling steps
+        to compress global enterprise threat states down to an indicator wire.
+        
+        Expected weights shape: 1D array of 4 parameters:
+        weights[0:2] -> Convolutional gate parameters
+        weights[2:4] -> Pooling gate parameters
+        """
+        if weights is None:
+            weights = np.zeros(4, requires_grad=True)
+
+        # --- 1. QUANTUM CONVOLUTION LAYER (Variational Search) ---
+        # Apply parameterised entangling filters across adjacent active wires
+        qml.CRX(weights[0], wires=[0, 1])
+        qml.CRX(weights[1], wires=[2, 3])
+        
+        qml.Barrier(wires=range(self.num_qubits)) 
+
+        # --- 2. QUANTUM POOLING LAYER (Dimensionality Reduction) ---
+        # Compress risk metrics from minor nodes into central hub nodes
+        qml.CRX(weights[2], wires=[1, 4])
+        qml.CRX(weights[3], wires=[3, 4])
+
     def get_circuit(self, target_node_id):
         """
         Compiles the QNode execution container for evaluation.
@@ -75,8 +98,13 @@ class QuantumBayesianRiskEvaluator:
         target_wire = self.wire_map[target_node_id]
         
         @qml.qnode(self.dev)
-        def circuit(live_priors):
+        def circuit(live_priors, weights=None):
+            # Step A: Deterministic Threat Topology Loader
             self.build_qbn_ansatz(live_priors)
+            
+            # Step B: Trainable Neural Layer Search & Compression
+            self.build_qcnn_layers(weights)
+            
             return qml.probs(wires=target_wire)
             
         return circuit
@@ -84,7 +112,6 @@ class QuantumBayesianRiskEvaluator:
 if __name__ == "__main__":
     print("\n[*] Initializing Universal Quantum Evaluator Framework...")
     
-    # Check if user explicitly requested full run via terminal command arguments
     run_full_production = "--production" in sys.argv
 
     # 1. Fetch live vulnerabilities metrics
@@ -100,21 +127,26 @@ if __name__ == "__main__":
         full_graph = parser.parse_structure()
         
         if run_full_production:
-            # Complete 32-qubit execution pass for HPC / Real Hardware systems
             evaluator = QuantumBayesianRiskEvaluator(full_graph, prune_to_track=None)
             target_node = "VRTX3"
+            initial_weights = np.zeros(4, requires_grad=True) # Placeholders for full run
         else:
-            # 5-qubit testing track pass to protect local laptop processors
             testing_track = ['VRTX5', 'VRTX6', 'VRTX7', 'VRTX4', 'VRTX3']
             evaluator = QuantumBayesianRiskEvaluator(full_graph, prune_to_track=testing_track)
             target_node = "VRTX3"
             
+            # Define an array of 4 trainable neural network weights initialized to specific radians
+            initial_weights = np.array([0.15, -0.22, 0.34, 0.12], requires_grad=True)
+            
         compiled_circuit = evaluator.get_circuit(target_node)
         print(f"[*] Executing quantum forward pass targeting node: {target_node}...")
-        probabilities = compiled_circuit(live_data)
+        
+        # Run the circuit with both live data AND the learning weights
+        probabilities = compiled_circuit(live_data, weights=initial_weights)
         
         print("\n--- QUANTUM SYSTEM EVALUATION COMPLETE ---")
         print(f"Target Node '{target_node}' Probabilities [Secure, Compromised]: {probabilities.numpy()}\n")
     else:
         print(f"[!] Architecture snapshot missing: {xdsl_path}")
+
 
