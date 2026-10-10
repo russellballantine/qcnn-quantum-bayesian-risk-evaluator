@@ -72,7 +72,8 @@ $$R_Y(\theta)|0\rangle = \cos\left(\frac{\theta}{2}\right)|0\rangle + \sin\left(
 For a dependent asset node $X_j$ conditioned on a set of parent nodes $\text{Parents}(X_j)$, risk propagation maps using multi-controlled rotation operators. 
 
 The conditional probability table (CPT) row values drive a Controlled-$R_Y$ unitary ($CR_Y(\phi)$). The target qubit rotates toward a compromised state if and only if the control wires are in the $|1\rangle$ state:
-$$CR_Y(\phi)_{ctrl, targ} = |0\rangle\langle0|_{ctrl} \otimes I_{targ} + |1\rangle\langle1|_{ctrl} \otimes R_Y(\phi)_{targ}$$
+
+$$CR_Y(\phi)_{\text{ctrl}, \text{targ}} = |0\rangle\langle0|_{\text{ctrl}} \otimes I_{\text{targ}} + |1\rangle\langle1|_{\text{ctrl}} \otimes R_Y(\phi)_{\text{targ}}$$
 
 This explicitly maps the causal chain structures of the original GeNIe model directly into quantum state amplitudes, allowing cascading risk vectors to propagate natively across the circuit via quantum interference.
 
