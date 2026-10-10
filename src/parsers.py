@@ -1,65 +1,69 @@
-# src/parsers.py
-import urllib.request
+import os
 import json
+import requests
 
-def fetch_vulnerability_metrics(cve_id):
-    """
-    Fetches raw quantitative security vectors from NIST NVD and FIRST EPSS endpoints.
+def fetch_metrics_for_cve(cve_id="CVE-2021-44228"):
+    print("\nFetching metrics for target identifier: " + str(cve_id) + "...")
     
-    Args:
-        cve_id (str): Standardized identifier format (e.g., 'CVE-2021-44228')
-    Returns:
-        dict: Parsed prior metrics for the Quantum Bayesian Network engine.
-    """
-    print(f"Fetching metrics for target identifier: {cve_id}...")
+    # --- FIXED: Full, complete API endpoints using direct string concatenation ---
+    epss_url = "https://api.first.org/data/v1/epss?cve=" + str(cve_id)
+    nvd_url = "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=" + str(cve_id)
     
-    # 1. Fetch live threat telemetry metrics from the FIRST EPSS API
-    epss_url = f"https://first.org{cve_id}"
-    epss_prob = 0.1  # Sensible fallback prior if the record is missing
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "Accept": "application/json"
+    }
+
     
+    session = requests.Session()
+    session.trust_env = False
+    session.headers.update(headers)
+    
+    # --- Ingest FIRST EPSS Probability ---
     try:
-        req = urllib.request.Request(epss_url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=10) as response:
-            epss_data = json.loads(response.read().decode())
-            entries = epss_data.get("data", [])
-            if entries:
-                epss_prob = float(entries[0]["epss"])
-                print(f"  [EPSS Target Found] Wild Exploitation Probability: {epss_prob:.5f}")
+        response = session.get(epss_url, timeout=10)
+        if response.status_code == 200:
+            res_data = response.json().get("data", [])
+            # Read first item out of data payload array list
+            if res_data and isinstance(res_data, list):
+                epss_score = float(res_data[0].get("epss", 0.1))
+            else:
+                epss_score = 0.1
+        else:
+            epss_score = 0.1
     except Exception as e:
-        print(f"  [Notice] EPSS Stream Unavailable, reverting to base prior: {e}")
+        print("  [Notice] EPSS Stream Unavailable, reverting to base prior: " + str(e))
+        epss_score = 0.1
 
-    # 2. Fetch baseline severity configurations from the NIST NVD API
-    nvd_url = f"https://nist.gov{cve_id}"
-    base_severity_score = 5.0  # Middle-of-the-road base severity fallback
-    
+    # --- Ingest NIST NVD Severity Metrics ---
     try:
-        req = urllib.request.Request(nvd_url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=10) as response:
-            nvd_data = json.loads(response.read().decode())
-            vulns = nvd_data.get("vulnerabilities", [])
-            if vulns:
-                # Target the CVSS v3.1 metrics collection block
-                metrics = vulns[0]["cve"]["metrics"]
-                cvss_list = metrics.get("cvssMetricV31", metrics.get("cvssMetricV30", []))
-                if cvss_list:
-                    base_severity_score = float(cvss_list[0]["cvssData"]["baseScore"])
-                    print(f"  [NIST NVD Found] CVSS Base Severity Score: {base_severity_score}/10.0")
+        response = session.get(nvd_url, timeout=10)
+        if response.status_code == 200:
+            vulns = response.json().get("vulnerabilities", [])
+            if vulns and isinstance(vulns, list):
+                cve_data = vulns[0].get("cve", {})
+                metrics = cve_data.get("metrics", {})
+                cvss_data = metrics.get("cvssMetricV31", []) or metrics.get("cvssMetricV30", [])
+                if cvss_data and isinstance(cvss_data, list):
+                    base_score = float(cvss_data[0]["cvssData"]["baseScore"])
+                    severity_score = base_score / 10.0  # Normalize metric score to probability decimal
+                else:
+                    severity_score = 0.5
+            else:
+                severity_score = 0.5
+        else:
+            severity_score = 0.5
     except Exception as e:
-        print(f"  [Notice] NIST NVD Connection bypassed, utilizing fallback severity: {e}")
-
-    # 3. Compile quantitative variables into unified priors
-    # Normalize the 0-10 CVSS base score into a neat probability scalar between 0.0 and 1.0
-    normalized_severity = base_severity_score / 10.0
+        print("  [Notice] NIST NVD Connection bypassed, utilizing fallback severity: " + str(e))
+        severity_score = 0.5
 
     return {
         "cve": cve_id,
-        "exploitability_prior": epss_prob,
-        "severity_prior": normalized_severity
+        "exploitability_prior": epss_score,
+        "severity_prior": severity_score
     }
 
 if __name__ == "__main__":
-    # Diagnostic check utilizing the historic Log4Shell target vector
-    test_cve = "CVE-2021-44228"
-    metrics = fetch_vulnerability_metrics(test_cve)
+    result = fetch_metrics_for_cve("CVE-2021-44228")
     print("\n--- INTAKE PARSER PASSED ---")
-    print(json.dumps(metrics, indent=2))
+    print(json.dumps(result, indent=2))

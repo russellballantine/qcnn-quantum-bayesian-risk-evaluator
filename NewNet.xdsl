@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="VRTX5">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX6">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX7">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX4">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX5 VRTX6 VRTX7</parents>
+			<probabilities>0.8 0.2 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX3">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX4</parents>
+			<probabilities>0.8 0.2 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX8">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX9">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX2">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX3 VRTX8 VRTX9</parents>
+			<probabilities>0.64 0.36 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX1">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX2</parents>
+			<probabilities>0.64 0.36 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX14">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX15">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX13">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX5 VRTX14 VRTX15</parents>
+			<probabilities>0.8 0.2 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX12">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX13</parents>
+			<probabilities>0.8 0.2 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX16">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX17">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX11">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX12 VRTX16 VRTX17</parents>
+			<probabilities>0.64 0.36 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX10">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX11</parents>
+			<probabilities>0.64 0.36 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX22">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX21">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX22 VRTX10</parents>
+			<probabilities>0.512 0.488 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX20">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX21</parents>
+			<probabilities>0.512 0.488 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX23">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX24">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX19">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX20 VRTX23 VRTX24</parents>
+			<probabilities>0.4096 0.5904 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX18">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX19</parents>
+			<probabilities>0.4096 0.5904 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX29">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX30">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX28">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX5 VRTX29 VRTX30</parents>
+			<probabilities>0.8 0.2 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX27">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX28</parents>
+			<probabilities>0.8 0.2 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX31">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>1 0</probabilities>
+		</cpt>
+		<cpt id="VRTX32">
+			<state id="Success" />
+			<state id="Failure" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX26">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX27 VRTX31 VRTX32</parents>
+			<probabilities>0.64 0.36 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VRTX25">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>VRTX26</parents>
+			<probabilities>0.64 0.36 0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.5.5408.0 ACADEMIC" name="Unnamed">
+			<node id="VRTX1">
+				<name>execCode(citrixServer,user)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>293 948 378 1003</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX2">
+				<name>RULE 3 (remote exploit for a client program)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>298 748 383 803</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX3">
+				<name>accessMaliciousInput(citrixServer,victim_2,ie)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>283 548 368 603</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX4">
+				<name>RULE 22 (Browsing a malicious website)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>284 356 369 411</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX5">
+				<name>attackerLocated(internet)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>317 163 402 218</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX6">
+				<name>hacl(citrixServer,internet,httpProtocol,httpPort)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>456 508 541 563</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX7">
+				<name>inCompetent(victim_2)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>193 268 278 323</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX8">
+				<name>hasAccount(victim_2,citrixServer,user)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>475 754 560 809</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX9">
+				<name>vulExists(citrixServer,&apos;CVE-2010-0490&apos;,ie,remoteClient,privEscalation)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>104 740 189 795</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX10">
+				<name>execCode(commServer,user)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1368 407 1453 462</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX11">
+				<name>RULE 3 (remote exploit for a client program)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1361 211 1446 266</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX12">
+				<name>accessMaliciousInput(commServer,victim_1,windows_2000)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1135 196 1220 251</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX13">
+				<name>RULE 22 (Browsing a malicious website)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>824 178 909 233</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX14">
+				<name>hacl(commServer,internet,httpProtocol,httpPort)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>537 63 622 118</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX15">
+				<name>inCompetent(victim_1)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>890 63 975 118</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX16">
+				<name>hasAccount(victim_1,commServer,user)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1497 88 1582 143</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX17">
+				<name>vulExists(commServer,&apos;CVE-2010-0483&apos;,windows_2000,remoteClient,privEscalation)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1325 40 1410 95</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX18">
+				<name>execCode(dataHistorian,root)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1221 918 1306 973</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX19">
+				<name>RULE 2 (remote exploit of a server program)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1223 786 1308 841</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX20">
+				<name>netAccess(dataHistorian,httpProtocol,httpPort)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1213 672 1298 727</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX21">
+				<name>RULE 5 (multi-hop access)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1202 493 1287 548</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX22">
+				<name>hacl(commServer,dataHistorian,httpProtocol,httpPort)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1469 537 1554 592</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX23">
+				<name>networkServiceInfo(dataHistorian,mountd,httpProtocol,httpPort,root)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1402 887 1487 942</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX24">
+				<name>vulExists(dataHistorian,&apos;CVE-2010-0494&apos;,mountd,remoteExploit,privEscalation)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1528 801 1613 856</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="VRTX25">
+				<name>execCode(vpnServer,user)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>629 946 714 1001</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX26">
+				<name>RULE 3 (remote exploit for a client program)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>789 803 874 858</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX27">
+				<name>accessMaliciousInput(vpnServer,victim_5,openvpn)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>630 595 715 650</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX28">
+				<name>RULE 22 (Browsing a malicious website)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>751 463 836 518</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX29">
+				<name>hacl(vpnServer,internet,httpProtocol,httpPort)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>775 358 860 413</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX30">
+				<name>inCompetent(victim_5)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>898 545 983 600</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX31">
+				<name>hasAccount(victim_5,vpnServer,user)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>930 712 1015 767</position>
+				<barchart active="true" />
+			</node>
+			<node id="VRTX32">
+				<name>vulExists(vpnServer,&apos;CVE-2010-0492&apos;,openvpn,remoteClient,privEscalation)</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1014 908 1099 963</position>
+				<barchart active="true" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
