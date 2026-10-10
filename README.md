@@ -47,7 +47,7 @@ PYTHONPATH=. ./.venv/bin/python src/quantum_circuit.py --production
 
 ---
 
-## 𝨢 Mathematical Overview
+## 𝨢  Mathematical Overview
 
 The framework translates a classical Directed Acyclic Graph (DAG) security model into a state-vector quantum mapping space using the following core mathematical definitions:
 
@@ -71,7 +71,7 @@ $$R_Y(\theta)|0\rangle = \cos\left(\frac{\theta}{2}\right)|0\rangle + \sin\left(
 ### 3. Conditional Risk Propagation (Quantum CPTs)
 For a dependent asset node $X_j$ conditioned on a set of parent nodes $\text{Parents}(X_j)$, risk propagation maps using multi-controlled rotation operators. 
 
-The conditional probability table (CPT) row values drive a Controlled-$R_Y$ unitary ($CR_Y(\phi)$). The target qubit rotates toward a compromised state if and only if the control wires are in the $|1\rangle$ state:
+The conditional probability table (CPT) row values drive a controlled-RY unitary CR_Y(phi). The target qubit rotates toward a compromised state if and only if the control wires are in the $\vert 1 \rangle$ state:
 
 $$CR_Y(\phi)_{\text{ctrl}, \text{targ}} = |0\rangle\langle0|_{\text{ctrl}} \otimes I_{\text{targ}} + |1\rangle\langle1|_{\text{ctrl}} \otimes R_Y(\phi)_{\text{targ}}$$
 
