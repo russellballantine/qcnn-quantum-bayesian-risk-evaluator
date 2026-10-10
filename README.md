@@ -43,3 +43,36 @@ PYTHONPATH=. ./.venv/bin/python src/quantum_circuit.py
 ```bash
 PYTHONPATH=. ./.venv/bin/python src/quantum_circuit.py --production
 ```
+
+
+---
+
+## 𝨢 Mathematical Overview
+
+The framework translates a classical Directed Acyclic Graph (DAG) security model into a state-vector quantum mapping space using the following core mathematical definitions:
+
+### 1. State Space Mapping
+Each threat node or enterprise asset variable $X_i$ is mapped to a physical qubit wire in the computational basis. The state of the register is a fluid superposition representing risk uncertainty:
+* $|0\rangle$: Node is secure / threat unrealised.
+* $|1\rangle$: Node is compromised / threat realised.
+
+The global system state vector $|\Psi\rangle$ for an $n$-qubit register is a linear combination across all $2^n$ computational states:
+$$\Psi\rangle = \sum_{x \in \{0,1\}^n} \alpha_x |x\rangle, \quad \sum_{x} |\alpha_x|^2 = 1$$
+
+### 2. Root Prior Embedding (QBN Feature Loader)
+For a root threat node $X_{\text{root}}$ with no parent dependencies, its live-ingested exploitability probability $P(X_{\text{root}} = 1)$ is deterministically embedded using a single-qubit $Y$-rotation gate ($R_Y$). 
+
+To map the classical probability amplitude perfectly to the quantum state vector, the rotation angle $\theta$ is mapped via:
+$$\theta = 2 \arcsin(\sqrt{P(X_{\text{root}} = 1)})$$
+
+When applied to a ground-state qubit, this yields the exact probability distribution upon measurement:
+$$R_Y(\theta)|0\rangle = \cos\left(\frac{\theta}{2}\right)|0\rangle + \sin\left(\frac{\theta}{2}\right)|1\rangle = \sqrt{1 - P}|0\rangle + \sqrt{P}|1\rangle$$
+
+### 3. Conditional Risk Propagation (Quantum CPTs)
+For a dependent asset node $X_j$ conditioned on a set of parent nodes $\text{Parents}(X_j)$, risk propagation maps using multi-controlled rotation operators. 
+
+The conditional probability table (CPT) row values drive a Controlled-$R_Y$ unitary ($CR_Y(\phi)$). The target qubit rotates toward a compromised state if and only if the control wires are in the $|1\rangle$ state:
+$$CR_Y(\phi)_{ctrl, targ} = |0\rangle\langle0|_{ctrl} \otimes I_{targ} + |1\rangle\langle1|_{ctrl} \otimes R_Y(\phi)_{targ}$$
+
+This explicitly maps the causal chain structures of the original GeNIe model directly into quantum state amplitudes, allowing cascading risk vectors to propagate natively across the circuit via quantum interference.
+
