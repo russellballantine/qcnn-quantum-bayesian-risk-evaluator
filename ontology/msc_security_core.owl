@@ -1,0 +1,1779 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#"
+     xml:base="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-49="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#decimal -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DR strategy means probability of data or service disruption is reduced</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasCountermeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasCountermeasure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasExploitability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasExploitability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasVulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasVulnerability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Vulnerability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_high -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_high">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessComplexity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_high</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_low -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_low">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessComplexity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_low</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_med -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_med">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessComplexity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_med</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_adjacent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_adjacent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessVector"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AV_adjacent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_local -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_local">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessVector"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AV_local</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_network -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_network">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessVector"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AV_network</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessComplexity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessComplexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessComplexity = case AccessComplexity of
+                                high:0.35
+                                medium:0.61
+                                low:0.71</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessVector -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AccessVector">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessVector = case AccessVector of
+                                 local access needed:0.395
+                                 adjacent network accessible:0.646
+                                 network accessible: 1.0</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_multiple -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_multiple">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Authentication"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auth_multiple</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_none -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_none">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Authentication"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auth_none</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_single -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_single">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Authentication"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auth_single</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Authentication -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Authentication">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiple instances of auth: 0.45
+Single instance of auth: 0.56
+No authentication: 0.704</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvaiReq_low -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvaiReq_low">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailReq_low</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailImpact = case AvailImpact of
+                                 none:0
+                                 partial:0.275
+                                 complete:0.660</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_complete -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_complete">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailImpact_complete</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_none -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_none">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailImpact_none</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_partial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_partial">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailImpact_partial</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailReq = case AvailReq of
+                                 not defined:1.0
+                                 low:0.5
+                                 medium:1.0
+                                 high:1.51</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_high -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_high">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailReq_high</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_med -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_med">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailReq_med</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_notdefined -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_notdefined">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailReq_notDefined</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BaseScoreValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BaseScoreValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BaseScoreValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_high -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_high">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CollateralDamagePotential"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_low -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_low">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CollateralDamagePotential"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_lowMed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_lowMed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CollateralDamagePotential"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_medHigh -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_medHigh">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CollateralDamagePotential"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_none -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_none">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CollateralDamagePotential"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_notDefined -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_notDefined">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CollateralDamagePotential"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CollateralDamagePotential -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CollateralDamagePotential">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collateral DP = case TargetDistribution of
+                                 none:0
+                                 low:0.1
+                                 low-medium:0.3
+                                 medium-high:0.4
+                                 high:0.5
+                                 not defined:0</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Can be informed by the FIPS standard if employed. An impact rating is normally associated to assets as part of this standard. Worth talking to the Disaster recovery side of the business to identify any standards employed which can inform these metrics.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the impact of the vulnrability on the data
+
+ConfImpact = case ConfImpact of
+                                 none:0
+                                 partial:0.275
+                                 complete:0.660</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_complete -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_complete">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfImpact_complete</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_none -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_none">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfImpact_none</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_partial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_partial">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfImpact_partial</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AvailReq= case AvailReq of
+                                 low:0.5
+                                 medium:1.0
+                                 high:1.51</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">These requirement settings can be informed by the FIPS standard for data if employed. IT assets have an impact rating assigned as part of this standard.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_high -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_high">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfReq_high</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_low -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_low">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfReq_low</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_med -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_med">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfReq_med</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_notDefined -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_notDefined">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfReq_notDefined</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CostMetric -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CostMetric">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This represents the implementation cost of a countermeasure.
+
+The cost set is {0,0.1,0.2...,0.9}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#EXploit_NotDefined -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#EXploit_NotDefined">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploitability"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#EnvironmentalScoreValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#EnvironmentalScoreValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_Func -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_Func">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploitability"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_High -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_High">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploitability"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_PoC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_PoC">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploitability"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_Unproven -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_Unproven">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploitability"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploitability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploitability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploitability = case of Exploitability
+                        unproven:0.85
+                        proof-of-concept: 0.9
+                        functional: 0.95
+                        high: 1.00
+                        not defined: 1.00</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the impact of the vulnrability on the data
+
+
+IntegImpact = case IntegImpact of
+                       none:0.0
+                       partial:0.275
+                       complete: 0.660</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_complete -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_complete">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntegImpact_complete</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_none -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_none">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntegImpact_none</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_partial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_partial">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntegImpact_partial</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntegReq = case IntegReq of
+                       low:0.5
+                       medium:1.0
+                       high:1.51
+                       notDefined: 1.0</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_high -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_high">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntegReq_high</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_low -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_low">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntegReq_low</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_med -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_med">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntegReq_med</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_notDefined -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_notDefined">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntegReq_notDefined</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_Confirmed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_Confirmed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ReportConfidence"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RC_Confirmed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_NotDefined -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_NotDefined">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ReportConfidence"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RC_notDefined</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_Unconfirmed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_Unconfirmed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ReportConfidence"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RC_unconfirmed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_uncorroborated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_uncorroborated">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ReportConfidence"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RC_uncorroborated</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_notDefined -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_notDefined">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemediationLevel"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RemLevel_notDefined</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_officialFix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_officialFix">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemediationLevel"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RemLevel_officialFix</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_tempFix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_tempFix">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemediationLevel"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RemLevel_tempFix</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_unavailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_unavailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemediationLevel"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RemLevel_unavailable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_workaround -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_workaround">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemediationLevel"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RemLevel_workaround</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemediationLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemediationLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RemediationLevel = case RemediationLevel of
+                                official-fix:0.87
+                                temp-fix: 0.90
+                                workaround: 0.95
+                                unavailable: 1.00
+                                not defined:1.00</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ReportConfidence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ReportConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_high -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_high">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TargetDistribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_low -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_low">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TargetDistribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_med -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_med">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TargetDistribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_none -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_none">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TargetDistribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_notDefined -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_notDefined">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TargetDistribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TargetDistribution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TargetDistribution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TargetDistribution = case TargetDistribution of
+                                 none:0
+                                 low:0.25
+                                 medium:0.75
+                                 high:1.0
+                                 not defined:1.0</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TemporalScoreValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TemporalScoreValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assets which are subject to vulnerabilities which can be exploited by threats.
+
+When the assets are created they are assigned values for the CVSS metrics covering confidentiality integrity and availability. 
+
+THe modeller should assign the relative importance values CR, IR and AR. The impact values are obtained from the base vector. The impact values are adjusted later by any countermeasures that are defined.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Vulnerability"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIST CVE vulnerabilities</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Authentication"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Authentication -- Changes Authentication AC_high
+        Level1 - Password == 0.704
+        Level2 - SSH key == 0.56
+        Level3 -- LDAP == 0.45
+SecurityTraining -- changes CDP and Exploitability
+        CDP
+        Level1 - None or not defined == 0
+        Level2 - Adhoc CBT == 0.1
+        Level3 - CBT(periodic) == 0.3
+        Level4 - Professional Cert == 0.5
+        Exploitability
+        Level1 - no accountability == 1.0
+        Level2 - some accountability == 0.9
+        Level3 - personnel fully accountable == 0.85
+System Security Audit - Changes Target Distribution
+        Level1 - None == 1.0
+        Level2 - Adhoc == 0.75
+        Level3 - Periodic system audits == 0.25
+Intrusion Detection - Changes Integrity Impact
+        Level1 - None == 0.66
+        Level2 - Virus guard == 0.275
+        Level3 - Full IPS/IDS and virus guard == 0
+Disaster Recovery - Changes availability impact
+        Level1 - None == 0.66
+        Level2 - Local server backups == 0.275
+        Level3 - SAN storage and cloud backups == 0</rdfs:comment>
+        <rdfs:label>Countermeasures</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Threat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Threat">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The threat component of the analysis is visible in the Bayesian Network representation. Might be visualised here for completeness later on but is not necessary at present.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Threat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Vulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Vulnerability">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vulnerability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ApplicationSandboxApplies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ApplicationSandboxApplies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</CollateralDamagePotential>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ApplicationWhitelistingApplies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ApplicationWhitelistingApplies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</CollateralDamagePotential>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AxwayFileTransfer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AxwayFileTransfer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <hasVulnerability rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2019-14277"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</AvailImpact>
+        <AvailReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AvailReq>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.660</ConfImpact>
+        <ConfReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</ConfReq>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.660</IntegImpact>
+        <IntegReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</IntegReq>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This constitutes the hardware platform and the data that is transferred by the platform. In a more extensive model, the data can be seperated from the hardware.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindFirewall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindFirewall">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindNetworkFirewall"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindHostFirewall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindHostFirewall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.395</AccessVector>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</CostMetric>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Host contains its own firewall. Moves security to a local status.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindNetworkFirewall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindNetworkFirewall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.646</AccessVector>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.267</CostMetric>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network location is behind a firewall protected infrastructure. This moves the network security to an &apos;adjacent&apos; status.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BehindNetworkFirewall</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CERTauthentication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CERTauthentication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.56</Authentication>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.01</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2002-0392 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2002-0392">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71</AccessComplexity>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</BaseScoreValue>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</CollateralDamagePotential>
+        <Exploitability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</Exploitability>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.87</RemediationLevel>
+        <ReportConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</ReportConfidence>
+        <TargetDistribution rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</TargetDistribution>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vulnerability on Apache web server (1.3 to 2.0.36)
+
+Vector: (AV:N/AC:L/Au:N/C:P/I:P/A:P)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2002-0392</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-00491 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-00491">
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</AccessComplexity>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.3</BaseScoreValue>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</CollateralDamagePotential>
+        <Exploitability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.00</Exploitability>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.87</RemediationLevel>
+        <ReportConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.00</ReportConfidence>
+        <TargetDistribution rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</TargetDistribution>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vulnerability on windows workstation
+
+Vector: (AV:N/AC:M/Au:N/C:C/I:C/A:C)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.3</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2010-0491</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0483 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0483">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindNetworkFirewall"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategyPartial"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#LDAPauthentication"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoPatchAvailable"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialHardeiningPolicyApplies"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialPipelineEncryption"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.35</AccessComplexity>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.6</BaseScoreValue>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</CollateralDamagePotential>
+        <Exploitability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</Exploitability>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.87</RemediationLevel>
+        <ReportConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</ReportConfidence>
+        <TargetDistribution rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</TargetDistribution>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vulnerability on Windows2000 server
+
+Vector: (AV:N/AC:H/Au:N/C:C/I:C/A:C)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.6</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2010-0483</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0490 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0490">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasCountermeasure"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindNetworkFirewall"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategyPartial"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#LDAPauthentication"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoPatchAvailable"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialHardeiningPolicyApplies"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialPipelineEncryption"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</AccessComplexity>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.3</BaseScoreValue>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</CollateralDamagePotential>
+        <Exploitability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</Exploitability>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</RemediationLevel>
+        <ReportConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</ReportConfidence>
+        <TargetDistribution rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</TargetDistribution>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vector representation of Citrix vulnerability
+
+Vector: (AV:N/AC:M/Au:N/C:C/I:C/A:C)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.3</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2010-0490</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0492 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0492">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindNetworkFirewall"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategyPartial"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#LDAPauthentication"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoPatchAvailable"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialHardeiningPolicyApplies"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</AccessComplexity>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.3</BaseScoreValue>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CollateralDamagePotential>
+        <Exploitability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</Exploitability>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.87</RemediationLevel>
+        <ReportConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</ReportConfidence>
+        <TargetDistribution rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</TargetDistribution>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vecor representation of VPN server vulnerability
+
+Vector: (AV:N/AC:M/Au:N/C:C/I:C/A:C)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.3</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2010-0492</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0494 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0494">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindNetworkFirewall"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#LDAPauthentication"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoPatchAvailable"/>
+        <hasCountermeasure rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialHardeiningPolicyApplies"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</AccessComplexity>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.3</BaseScoreValue>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</CollateralDamagePotential>
+        <Exploitability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.85</Exploitability>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.87</RemediationLevel>
+        <ReportConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</ReportConfidence>
+        <TargetDistribution rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.00</TargetDistribution>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vecor representation of NFS  mountd vulnerability
+
+Vector: (AV:N/AC:M/Au:N/C:P/I:N/A:N)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.3</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2010-0494</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0812 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0812">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71</AccessComplexity>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.4</BaseScoreValue>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</CollateralDamagePotential>
+        <Exploitability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.00</Exploitability>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</RemediationLevel>
+        <ReportConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.00</ReportConfidence>
+        <TargetDistribution rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</TargetDistribution>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vecor representation of FileServer vulnerability
+
+Vector: (AV:N/AC:L/Au:N/C:P/I:P/A:N)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.4</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2010-0812</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2019-14277 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2019-14277">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</AccessComplexity>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</BaseScoreValue>
+        <CollateralDamagePotential rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</CollateralDamagePotential>
+        <Exploitability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</Exploitability>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.00</RemediationLevel>
+        <ReportConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.00</ReportConfidence>
+        <TargetDistribution rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</TargetDistribution>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vector Representation for Axway vulnerability
+
+AV:N/AC:M/Au:N/C:P/I:P/A:P</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2019-14277</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CitrixServer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CitrixServer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasVulnerability rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0490"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.660</AvailImpact>
+        <AvailReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</AvailReq>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.660</ConfImpact>
+        <ConfReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</ConfReq>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.660</IntegImpact>
+        <IntegReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</IntegReq>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the authentication platform, authenticating using SSL VPN and thin client technology.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DataHistorian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DataHistorian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasVulnerability rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0494"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</AvailImpact>
+        <AvailReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AvailReq>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</ConfImpact>
+        <ConfReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</ConfReq>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</IntegImpact>
+        <IntegReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</IntegReq>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data repository of some kind.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DeviceHardeningPolicyApplies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DeviceHardeningPolicyApplies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.35</AccessComplexity>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</AvailImpact>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategyPartial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategyPartial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</AvailImpact>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</CostMetric>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partial DR processes in place. For example certain DB tables backed up only.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisasterRecoveryStrategyPartial</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#End2EndPipeLineEncryption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#End2EndPipeLineEncryption">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</ConfImpact>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.02</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#FileServer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#FileServer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <hasVulnerability rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0812"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</AvailImpact>
+        <AvailReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AvailReq>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</ConfImpact>
+        <ConfReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</ConfReq>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</IntegImpact>
+        <IntegReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</IntegReq>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A basic file server</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IPSandDoSMitigation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IPSandDoSMitigation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CostMetric>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</IntegImpact>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full stste of the art IPS and Denial of Service measures are deployed on the network.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntrusionDetectionDeployed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntrusionDetectionDeployed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CostMetric>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</IntegImpact>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDS measures are deployed but there are no DoS mitigation or IPS measures.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#LDAPauthentication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#LDAPauthentication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.40</Authentication>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.133</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#MultiFactorAuthentication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#MultiFactorAuthentication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.45</Authentication>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.02</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoAuthentication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoAuthentication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.704</Authentication>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoFirewall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoFirewall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <AccessVector rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AccessVector>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoPatchAvailable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NoPatchAvailable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</CostMetric>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</RemediationLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NohardeningPolicyApplies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#NohardeningPolicyApplies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71</AccessComplexity>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#OfficialPatchAvailable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#OfficialPatchAvailable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CostMetric>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.87</RemediationLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialHardeiningPolicyApplies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialHardeiningPolicyApplies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <AccessComplexity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</AccessComplexity>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.067</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialPipelineEncryption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialPipelineEncryption">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</ConfImpact>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.133</CostMetric>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Only part of the end to end data transfer provides encrypted comms</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PasswordPolicyAutoEnforced -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PasswordPolicyAutoEnforced">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <Authentication rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.56</Authentication>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CostMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TempFixAvailable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TempFixAvailable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#SecurityControl"/>
+        <CostMetric rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</CostMetric>
+        <RemediationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</RemediationLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#VPNServer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#VPNServer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasVulnerability rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0492"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</AvailImpact>
+        <AvailReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.00</AvailReq>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</ConfImpact>
+        <ConfReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</ConfReq>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</IntegImpact>
+        <IntegReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</IntegReq>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VPN concentrator device. Could be a firewall or a router acting as a VPN gateway.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#WebServer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#WebServer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <hasVulnerability rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2002-0392"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</AvailImpact>
+        <AvailReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</AvailReq>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</ConfImpact>
+        <ConfReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</ConfReq>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.275</IntegImpact>
+        <IntegReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</IntegReq>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apache webservers etc.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Windows2000Server -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Windows2000Server">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasVulnerability rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-0483"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.660</AvailImpact>
+        <AvailReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</AvailReq>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.660</ConfImpact>
+        <ConfReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</ConfReq>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</IntegImpact>
+        <IntegReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</IntegReq>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Represents the Windows user platform(SBC, PDC etc.)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#WorkStation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#WorkStation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Asset"/>
+        <hasVulnerability rdf:resource="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CVE-2010-00491"/>
+        <AvailImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</AvailImpact>
+        <AvailReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</AvailReq>
+        <ConfImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</ConfImpact>
+        <ConfReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</ConfReq>
+        <IntegImpact rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</IntegImpact>
+        <IntegReq rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.51</IntegReq>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A users workstation</rdfs:comment>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <Exploit_Func rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</Exploit_Func>
+    </rdf:Description>
+    <rdf:Description>
+        <BaseScoreValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</BaseScoreValue>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindHostFirewall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#BehindNetworkFirewall"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#DisasterRecoveryStrategyPartial"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#End2EndPipeLineEncryption"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#PartialPipelineEncryption"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IPSandDoSMitigation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntrusionDetectionDeployed"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_high"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AC_med"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_adjacent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_local"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AV_network"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_multiple"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_none"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Auth_single"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvaiReq_low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_high"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_med"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailReq_notdefined"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_complete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_none"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#AvailImpact_partial"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_high"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_lowMed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_medHigh"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_none"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#CDP_notDefined"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_complete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_none"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfImpact_partial"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_high"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_med"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#ConfReq_notDefined"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#EXploit_NotDefined"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_Func"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_PoC"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#Exploit_Unproven"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_complete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_none"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegImpact_partial"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_high"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_med"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#IntegReq_notDefined"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_Confirmed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_NotDefined"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_Unconfirmed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RC_uncorroborated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_notDefined"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_officialFix"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_tempFix"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_unavailable"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#RemLevel_workaround"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_high"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_med"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_none"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ballanr/ontologies/2021/2/untitled-ontology-49#TD_notDefined"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

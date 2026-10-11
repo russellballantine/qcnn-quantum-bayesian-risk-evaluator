@@ -1,0 +1,39 @@
+# QUANTUM BAYESIAN RISK EVALUATOR - MAPPING PROFILE
+# Configuration contract for Vector C ontology ingestion pipelines
+
+ontology:
+  namespace: "http://semanticweb.org"
+  local_path: "ontology/msc_security_core.owl"
+
+pipeline_filters:
+  # Target semantic classes to register as Qubit Wires (VERTICES.csv)
+  target_classes:
+    - "Asset"
+    - "CVE"
+    - "SecurityControl"
+    - "Threat"
+
+  # Causal structural links to extract into relational vectors (ARCS.csv)
+  target_object_properties:
+    - "hasVulnerability"
+    - "hasCountermeasure"
+
+  # Metric data properties to pull for prior probability calculations
+  target_data_properties:
+    - "AccessComplexity"
+    - "Exploitability"
+    - "BaseScoreValue"
+    - "ConfImpact"
+    - "IntegImpact"
+    - "AvailImpact"
+
+# CRITICAL PRIOR GROUNDING MATRIX
+# Fallback baselines used if an individual is missing an explicit property value
+probabilistic_defaults:
+  AccessComplexity: 0.61     # Default to Medium complexity (CVSS v2 standard translation)
+  Exploitability: 1.00       # Default to unproven/high exploit availability
+  BaseScoreValue: 5.0        # Medium base severity placeholder
+  ConfImpact: 0.275          # Partial data leakage assumption
+  IntegImpact: 0.275         # Partial corruption assumption
+  AvailImpact: 0.275         # Partial service degradation assumption
+
