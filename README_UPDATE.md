@@ -1,29 +1,32 @@
-# QUANTUM BAYESIAN RISK EVALUATOR - PHASE 6
+# QUANTUM BAYESIAN RISK EVALUATOR - PHASE 6 MANIFEST
+
 > **Project State:** Alpha Milestone Phase 6 Operational (Vector C Completed)  
 > **Inference Engine:** Hybrid QBN-to-QCNN Ingest & Variational Training Pipeline  
 > **Execution Environment:** macOS Isolated Virtual Environment (`.venv`)
 
-=========================================================
-1. TECHNICAL ARCHITECTURE OVERVIEW (VECTOR C INTEGRATION)
-=========================================================
+***
 
-This phase establishes a decoupled, configuration-driven semantic orchestration layer 
-directly upstream of the classical-to-quantum execution core. 
+### 1. Technical Architecture Overview (Vector C Integration)
 
-Instead of brittle, hardcoded node registries, the pipeline utilizes `owlready2` to parse 
-W3C Web Ontology Language (OWL) schemas in RDF/XML format. Entity structures, object 
-property dependencies, and numerical CVSS data properties are translated dynamically via a 
-lightweight contract profile (`config/mapping.yaml`) into normalized execution matrices.
+This phase establishes a decoupled, configuration-driven semantic orchestration layer directly upstream of the classical-to-quantum execution core. 
 
-### Core Execution Pipeline Chain:
-1. **`config/mapping.yaml`**: The single source of truth for schema translation rules. Maps local base namespaces, target structural classes (`Asset`, `CVE`, `SecurityControl`), and causal links (`hasVulnerability`, `hasCountermeasure`) cleanly outside core application code.
-2. **`src/ontology_processor.py`**: Ingests the OWL graph, extracts entities, and enforces a strict alphabetical sorting boundary (`sorted(unique_names)`) to isolate PennyLane wire maps from configuration drift. It populates `data/VERTICES.csv` and `data/ARCS.csv` seamlessly.
-3. **`src/quantum_circuit.py`**: Reads structural buffers, maps a 37-qubit production target framework, and isolates lightweight sub-tracks in **Development Mode** to protect local runtime RAM constraints. It converts raw CVSS properties into parameterized rotations using \(\theta = 2 \arcsin(\sqrt{P})\).
-4. **`src/train.py`**: Drives PennyLane's tracked `numpy` gradients through the `AdamOptimizer`, updating variational QCNN spatial filters natively against live ontological structures.
+Instead of brittle, hardcoded node registries, the pipeline utilizes `owlready2` to parse W3C Web Ontology Language (OWL) schemas in RDF/XML format. Entity structures, object property dependencies, and numerical CVSS data properties are translated dynamically via a lightweight contract profile (`config/mapping.yaml`) into normalized execution matrices.
 
-==================================================
-2. WORKSPACE DIRECTORY & ARTIFACT SYNCHRONIZATION
-==================================================
+```text
+ [ Domain Layer ] ----------> [ Mapping Layer ] ----------> [ Ingestion Engine ] ----------> [ Quantum Register ]
+Your Security Ontology       config/mapping.yaml          src/ontology_processor.py        data/VERTICES.csv
+(Can be edited at will)      (The translation contract)   (Pure math - never changes)      (Dynamic Wires)
+```
+
+#### Core Execution Pipeline Chain:
+* **`config/mapping.yaml`**: The single source of truth for schema translation rules. Maps local base namespaces, target structural classes (`Asset`, `CVE`, `SecurityControl`), and causal links (`hasVulnerability`, `hasCountermeasure`) cleanly outside core application code.
+* **`src/ontology_processor.py`**: Ingests the OWL graph, extracts entities, and enforces a strict alphabetical sorting boundary (`sorted(unique_names)`) to isolate PennyLane wire maps from configuration drift. It populates `data/VERTICES.csv` and `data/ARCS.csv` seamlessly.
+* **`src/quantum_circuit.py`**: Reads structural buffers, maps a 37-qubit production target framework, and isolates lightweight sub-tracks in **Development Mode** to protect local runtime RAM constraints. It converts raw CVSS properties into parameterized rotations using \(\theta = 2 \arcsin(\sqrt{P})\).
+* **`src/train.py`**: Drives PennyLane's tracked `numpy` gradients through the `AdamOptimizer`, updating variational QCNN spatial filters natively against live ontological structures.
+
+***
+
+### 2. Workspace Directory & Artifact Synchronization
 
 Ensure your project tree matches this architecture layout before running pipeline passes:
 
@@ -31,27 +34,27 @@ Ensure your project tree matches this architecture layout before running pipelin
 qcnn-quantum-bayesian-risk-evaluator/
 │
 ├── config/                      
-│   └── mapping.yaml             <--- NEW: Ingestion Translation Contract Profile
+│   └── mapping.yaml             <--- Ingestion Translation Contract Profile
 │
 ├── ontology/                    
-│   └── msc_security_core.owl    <--- NEW: Semantic Security Ontology Schema Graph
+│   └── msc_security_core.owl    <--- Semantic Security Ontology Schema Graph
 │
 ├── src/                         
 │   ├── __init__.py
 │   ├── parsers.py               (Phase 1 Ingest Client)
 │   ├── xml_parser.py            (Phase 2 Topology Engine)
-│   ├── quantum_circuit.py       (Phases 3 & 4 Upgraded PennyLane Core Core)
+│   ├── quantum_circuit.py       (Phases 3 & 4 Upgraded PennyLane Core)
 │   ├── train.py                 (Phase 5 Upgraded Hybrid Optimizer Model)
-│   └── ontology_processor.py    <--- NEW: Config-Driven OWL Processing Script
+│   └── ontology_processor.py    <--- Config-Driven OWL Processing Script
 │
 └── data/                        
     ├── VERTICES.csv             <--- REGENERATED: Mapped with Parametric Metrics
     └── ARCS.csv                 <--- REGENERATED: 28 Active Relational Connections
 ```
 
-========================================================
-3. METRIC BASELINE RECORD (LATEST ACTIVE VALIDATION RUN)
-========================================================
+***
+
+### 3. Metric Baseline Record (Latest Active Validation Run)
 
 * **Target Identifier Track (Dev Mode):** `WebServer` ── `CVE-2002-0392` ── `BehindNetworkFirewall`
 * **Qubit Register Footprint:** 37 Total Ontological Nodes Verified and Bound.
@@ -60,9 +63,10 @@ qcnn-quantum-bayesian-risk-evaluator/
 * **Optimized Terminal Cost Profile:** **0.259237 MSE Loss** (Achieved in 15 Epochs)
 * **Trained Variational Angles:** `[1.706445, 0.067800, 0.708063, 1.644100]`
 
-=================================================
-4. ECOSYSTEM DEPENDENCIES (UPDATED REQUIREMENTS)
-=================================================
+***
+
+### 4. Ecosystem Dependencies (Updated Requirements)
+
 The current pipeline build requires the following packages installed inside your virtual environment. Append these blocks directly to your `requirements.txt` file:
 
 ```text
@@ -80,24 +84,25 @@ To initialize your development stack or resolve environment errors, execute:
 pip install pyyaml pandas owlready2 pennylane
 ```
 
-=============================
-5. PIPELINE INVOCATION STEPS
-=============================
+***
+
+### 5. Pipeline Invocation Steps
+
 To run the end-to-end framework execution passes within your active virtual terminal environment, use the following operational lifecycle commands:
 
-**Step 1: Extract Semantic Topologies & Rebuild Data Matrices**
+#### Step 1: Extract Topologies & Rebuild Data Matrices
 ```bash
 python3 src/ontology_processor.py
 ```
 *Expected Behavior:* The compiler locks all 37 unique registers, binds explicit CVSS values (e.g., pulling **9.3** for `CVE-2010-0490`), applies default safe fallbacks, and writes out 28 validated connectivity links to disk.
 
-**Step 2: Trigger Circuit Verification Gate & Compute Initial Superpositions**
+#### Step 2: Trigger Circuit Verification Gate
 ```bash
 python3 src/quantum_circuit.py
 ```
 *Expected Behavior:* Confirms a successful local simulation initialization, calculating an initial risk state balance point expectation value of `<Z> = -0.000000`.
 
-**Step 3: Execute Gradient Descent Optimization Training Loop**
+#### Step 3: Execute Gradient Descent Optimization Training Loop
 ```bash
 python3 -m src.train
 ```
