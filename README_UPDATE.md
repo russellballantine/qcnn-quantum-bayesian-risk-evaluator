@@ -1,11 +1,12 @@
-# QUANTUM BAYESIAN RISK EVALUATOR - PHASE 6 MANIFEST
+# QUANTUM BAYESIAN RISK EVALUATOR - PHASE 6
 > **Project State:** Alpha Milestone Phase 6 Operational (Vector C Completed)  
 > **Inference Engine:** Hybrid QBN-to-QCNN Ingest & Variational Training Pipeline  
 > **Execution Environment:** macOS Isolated Virtual Environment (`.venv`)
 
-===============================================================================
+=========================================================
 1. TECHNICAL ARCHITECTURE OVERVIEW (VECTOR C INTEGRATION)
-===============================================================================
+=========================================================
+
 This phase establishes a decoupled, configuration-driven semantic orchestration layer 
 directly upstream of the classical-to-quantum execution core. 
 
@@ -20,9 +21,10 @@ lightweight contract profile (`config/mapping.yaml`) into normalized execution m
 3. **`src/quantum_circuit.py`**: Reads structural buffers, maps a 37-qubit production target framework, and isolates lightweight sub-tracks in **Development Mode** to protect local runtime RAM constraints. It converts raw CVSS properties into parameterized rotations using \(\theta = 2 \arcsin(\sqrt{P})\).
 4. **`src/train.py`**: Drives PennyLane's tracked `numpy` gradients through the `AdamOptimizer`, updating variational QCNN spatial filters natively against live ontological structures.
 
-===============================================================================
+==================================================
 2. WORKSPACE DIRECTORY & ARTIFACT SYNCHRONIZATION
-===============================================================================
+==================================================
+
 Ensure your project tree matches this architecture layout before running pipeline passes:
 
 ```text
@@ -47,9 +49,10 @@ qcnn-quantum-bayesian-risk-evaluator/
     └── ARCS.csv                 <--- REGENERATED: 28 Active Relational Connections
 ```
 
-===============================================================================
+========================================================
 3. METRIC BASELINE RECORD (LATEST ACTIVE VALIDATION RUN)
-===============================================================================
+========================================================
+
 * **Target Identifier Track (Dev Mode):** `WebServer` ── `CVE-2002-0392` ── `BehindNetworkFirewall`
 * **Qubit Register Footprint:** 37 Total Ontological Nodes Verified and Bound.
 * **Structural Dependency Volume:** 28 Relational Asymmetric Arcs Extracted.
@@ -57,9 +60,9 @@ qcnn-quantum-bayesian-risk-evaluator/
 * **Optimized Terminal Cost Profile:** **0.259237 MSE Loss** (Achieved in 15 Epochs)
 * **Trained Variational Angles:** `[1.706445, 0.067800, 0.708063, 1.644100]`
 
-===============================================================================
+=================================================
 4. ECOSYSTEM DEPENDENCIES (UPDATED REQUIREMENTS)
-===============================================================================
+=================================================
 The current pipeline build requires the following packages installed inside your virtual environment. Append these blocks directly to your `requirements.txt` file:
 
 ```text
@@ -77,9 +80,9 @@ To initialize your development stack or resolve environment errors, execute:
 pip install pyyaml pandas owlready2 pennylane
 ```
 
-===============================================================================
+=============================
 5. PIPELINE INVOCATION STEPS
-===============================================================================
+=============================
 To run the end-to-end framework execution passes within your active virtual terminal environment, use the following operational lifecycle commands:
 
 **Step 1: Extract Semantic Topologies & Rebuild Data Matrices**
